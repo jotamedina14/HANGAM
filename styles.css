@@ -1,0 +1,212 @@
+body {
+    font-family: "Gochi Hand", cursive;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.container {
+
+    text-align: center; 
+}
+
+.image-container img {
+    width: 100%; 
+    max-width: 850px; 
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px; 
+}
+
+.category {
+    padding: 15px 30px; 
+    font-size: 25px; 
+    color: rgb(0, 0, 0);
+    font-family: "Gochi Hand", cursive;
+    border: none;
+    border-radius: 15px; 
+    cursor: pointer;
+    background-image: linear-gradient(180deg,#42aaff,#06ff38);
+}
+
+.difficulty-container {
+    margin-top: 25px;
+}
+
+.difficulty {
+    display: none;
+}
+.dificultad{
+    padding: 15px 30px; 
+    font-family: "Gochi Hand", cursive;
+    font-size: 25px; 
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 15px; 
+    cursor: pointer;
+    background-image: linear-gradient(180deg,#42aaff,#06ff38);
+}
+ h2{
+    color:white;
+ }
+ .difficulty button{
+    margin: 0 20px;
+ }
+ .alfabeto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-left-style: solid;
+    border-left-width: 2px;
+    padding-bottom: 1vh;
+    position: relative; 
+    z-index: 0; 
+}
+.alfabeto button {
+    font-size: 60px;
+    width: auto; 
+    height: auto; 
+    padding: 10px 15px; 
+    margin: 5px; 
+   
+}
+
+
+.alfabeto button:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+.alfabeto {
+    background: none;
+    top: 210px;
+}
+/* esta es la compatibilidad para los diferentes navegadores  */
+.alfabeto button {
+    font-family: "Gochi Hand", cursive;
+    font-weight: 800;
+    background: linear-gradient(180deg, #42aaff, #06ff38); /* Fallback para navegadores que no admiten la propiedad -webkit-linear-gradient */
+    background: -webkit-linear-gradient(180deg, #42aaff, #06ff38, #fffb1c); /* Para navegadores WebKit como Safari y Chrome */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-background-clip: text; /* Para navegadores WebKit */
+    -webkit-text-fill-color: transparent; /* Propiedad estándar */
+
+}
+
+.palabras {
+    font-size: 55px;
+    color: white;
+    position: absolute; 
+    top: 330px; 
+    right: 30px; 
+    margin-right: 80px;
+    z-index: 1;
+}
+
+.palabras p {
+    margin: 0; 
+    float: right; 
+}
+
+.palabras p span {
+    border-bottom: 1px solid white; 
+    padding: 0 5px; 
+}
+
+.guiones {
+    color: white;
+}
+
+.intentos {
+    font-size: 18px; 
+    font-weight: bold; 
+    color: white;
+    position: absolute;
+    top: 40px;
+    right: 30px; 
+    margin-right: 80px;
+}
+#intentos {
+    font-size: 30px; 
+}
+
+#intentos span {
+    font-size: 30px; 
+}
+
+#gallows {
+    width: 50%; /* Ajusta el ancho del contenedor de la imagen de los errores */
+    float: left; /* Añade float left para que se alinee a la izquierda */
+    text-align: left; /* Ajusta el texto a la izquierda dentro del contenedor */
+    margin-top: -350px; /* Agrega un margen superior negativo mayor para moverlo más hacia arriba */
+}
+.game-over {
+    opacity: 0.9;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+  }
+  .game-over .you-win,
+  .game-over .you-loss {
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .game-over .you-win > *,
+  .game-over .you-loss > * {
+    margin-bottom: 1rem;
+  }
+  .game-over .you-loss .loss-text,
+  .game-over .you-win .win-text {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .game-over .you-loss .loss-text {
+    font-family: "Gochi Hand", cursive;
+    background: linear-gradient(180deg, #42aaff, #06ff38); 
+    background: -webkit-linear-gradient(180deg, #42aaff, #06ff38, #fffb1c); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+  }
+  .game-over .you-win .win-text {
+    font-family: "Gochi Hand", cursive;
+    background: linear-gradient(180deg, #42aaff, #06ff38); 
+    background: -webkit-linear-gradient(180deg, #42aaff, #06ff38, #fffb1c); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+  }
+  .btn-primary, .btn-secondary{
+    padding: 10px 20px;
+    font-family: "Gochi Hand", cursive;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: linear-gradient(180deg, #42aaff, #06ff38);
+    color: #000;
+    text-decoration: none;
+  }

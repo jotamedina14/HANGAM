@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="game-over" style="visibility: hidden;">
+        <div class="you-loss">
+            <strong class="loss-text">¡Fallaste, inténtalo de nuevo!</strong>
+            <a href="#" onclick="restartGame();" class="btn-primary">Intentar de nuevo</a>
+            <a href="index.html" class="btn-secondary">Rendirse</a>
+        </div>
+        <div class="you-win" style="display: none;">
+            <p class="win-text">¡Felicidades, lo lograste!</p>
+            <a href="index.html" class="btn-secondary">Volver al menú</a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="ahorcado.png" alt="Ahorcado">
+        </div>
+        <div class="categories">
+            <button class="category" onclick="showDifficulty('frutas')">Frutas</button>
+            <button class="category" onclick="showDifficulty('animales')">Animales</button>
+            <button class="category" onclick="showDifficulty('paises')">Países</button>
+        </div>
+        <div id="difficulty" class="difficulty-container">
+            <!-- Aca van los botones de dificultad -->
+        </div>
+    </div>
+    <div id="ahorcado-container">
+        <div id="palabras" class="palabras"></div>
+        <div id="intentos" class="intentos"></div>
+        <!-- Aquí se mostrarán los intentos restantes -->
+        <div class="alfabeto" style="display: none;">
+            <button class="letras">A</button>
+            <button class="letras">B</button>
+            <button class="letras">C</button>
+            <button class="letras">D</button>
+            <button class="letras">E</button>
+            <button class="letras">F</button>
+            <button class="letras">G</button>
+            <button class="letras">H</button>
+            <button class="letras">I</button>
+            <button class="letras">J</button>
+            <button class="letras">K</button>
+            <button class="letras">L</button>
+            <button class="letras">M</button>
+            <button class="letras">N</button>
+            <button class="letras">Ñ</button>
+            <button class="letras">O</button>
+            <button class="letras">P</button>
+            <button class="letras">Q</button>
+            <button class="letras">R</button>
+            <button class="letras">S</button>
+            <button class="letras">T</button>
+            <button class="letras">U</button>
+            <button class="letras">V</button>
+            <button class="letras">W</button>
+            <button class="letras">X</button>
+            <button class="letras">Y</button>
+            <button class="letras">Z</button>
+        </div>
+        <!--imagenes del ahorcado-->
+        <div id="gallows"></div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
